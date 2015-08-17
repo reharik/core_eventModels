@@ -6,7 +6,11 @@
   "node": ">=0.12.0",
   "dependencies": {
     "extend": "^3.0.0",
-    "yowlwrapper": "https://github.com/reharik/yowlwrapper.git#master"
+<<<<<<< HEAD
+    "yowlwrapper": "http://github.com/reharik/yowlwrapper.git#master"
+=======
+    "yowlwrapper": "git+https://github.com/reharik/core_yowlWrapper.git"
+>>>>>>> 061dcb6dbbfff24a4470b2e2c2c71a35a9fc53d9
   },
   "devDependencies": {
     "babel": "^5.5.6",
