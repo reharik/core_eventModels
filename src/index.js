@@ -3,7 +3,7 @@
  */
 
 var extend = require('extend');
-var yowlWrapper = require('yowlWrapper');
+var yowlWrapper = require('yowlwrapper');
 var EventData = require('./EventData');
 var _GesEvent = require('./GesEvent');
 var NotificationEvent = require('./NotificationEvent');
