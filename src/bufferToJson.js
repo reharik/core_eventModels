@@ -2,6 +2,7 @@
  * Created by reharik on 8/14/15.
  */
 
+
 module.exports = function(logger) {
     return function bufferToJson(item) {
         if(!Buffer.isBuffer(item)){
