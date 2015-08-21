@@ -5,6 +5,8 @@
   "license": "MIT",
   "node": ">=0.12.0",
   "dependencies": {
+    "Buffer": "0.0.0",
+    "buffer": "^3.4.2",
     "extend": "^3.0.0",
     "yowlwrapper": "https://github.com/reharik/core_yowlWrapper.git#master"
   },
