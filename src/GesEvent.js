@@ -18,8 +18,8 @@ module.exports = function(bufferToJson){
             originalPosition: originalPosition
         };
     };
-    var gesEventFromStream = function(sd, eventName) {
-        return init(sd.OriginalEvent.Metadata[eventName],
+    var gesEventFromStream = function(sd) {
+        return init(sd.OriginalEvent.Metadata['eventName'],
             sd.OriginalEvent.Data,
             sd.OriginalEvent.Metadata,
             sd.OriginalPosition);
