@@ -2,8 +2,7 @@
  * Created by rharik on 6/19/15.
  */
 
-
-module.exports = function( _result, _message, _initialEvent) {
+module.exports = function( _result, _message, _initialEvent, continuationId) {
     var eventName = 'notification';
     var data = {
         result: _result,
@@ -14,6 +13,7 @@ module.exports = function( _result, _message, _initialEvent) {
 
     return {
         eventName: eventName,
+        continuationId: continuationId,
         data: data
     }
 };

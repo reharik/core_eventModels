@@ -23,6 +23,6 @@ module.exports = function index(_options) {
     return{
         eventData:EventData,
         gesEvent:GesEvent,
-        notificationEvent:NotificationEvent(GesEvent)
+        notificationEvent:NotificationEvent
     }
 };
