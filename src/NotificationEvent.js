@@ -3,8 +3,6 @@
  */
 
 
-var GesEvent = require('./GesEvent');
-
 module.exports = function( _result, _message, _initialEvent) {
     var eventName = 'notification';
     var data = {
