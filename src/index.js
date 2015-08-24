@@ -21,8 +21,8 @@ module.exports = function index(_options) {
     var bufferToJson = _bufferToJson(logger);
     var GesEvent = _GesEvent(bufferToJson);
     return{
-        EventData:EventData,
-        GesEvent:GesEvent,
-        NotificationEvent:NotificationEvent(GesEvent)
+        eventData:EventData,
+        gesEvent:GesEvent,
+        notificationEvent:NotificationEvent(GesEvent)
     }
 };
