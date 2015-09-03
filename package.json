@@ -1,11 +1,25 @@
 {
-  "name": "eventmodels",
+  "name": "core_eventModels",
   "version": "0.0.1",
-  "main": "src/index.js",
+  "private": false,
+  "description": "core_eventModels",
+  "homepage": "https://github.com/reharik/core_eventModels#readme",
+  "main": "src/plugin.js",
+  "scripts": {
+    "test": ""
+  },
+  "bugs": {
+    "url": "https://github.com/reharik/core_eventModels/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reharik/core_eventModels.git"
+  },
+  "keywords": [
+  ],
+  "author": "Raif Harik",
   "license": "MIT",
-  "node": ">=0.12.0",
   "dependencies": {
-    "Buffer": "0.0.0",
     "buffer": "^3.4.2",
     "extend": "^3.0.0",
     "yowlwrapper": "https://github.com/reharik/core_yowlWrapper.git#master"
