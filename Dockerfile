@@ -6,7 +6,7 @@ MAINTAINER reharik@gmail.com
 ENV PLUGIN_HOME /opt/app/current
 
 RUN npm install mocha -g
-RUN npm install istanbul -g
+RUN npm install babel -g
 
 EXPOSE 3000
 EXPOSE 5858
@@ -27,6 +27,5 @@ WORKDIR $PLUGIN_HOME
 ADD ./package.json $PLUGIN_HOME/package.json
 
 RUN npm install
-RUN mv node_modules ../
 
 ADD . $PLUGIN_HOME
