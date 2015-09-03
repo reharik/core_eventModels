@@ -1,11 +1,8 @@
 plugin:
  build: .
  volumes:
-  - .:/opt/app/current
- command: npm test 
- ports: 
-  - "3000:3000" 
-  - "5858:5858" 
+  - .:/home/app/current
+ command: npm test
  environment:
   DEBUG: true
   NODE_ENV: development
