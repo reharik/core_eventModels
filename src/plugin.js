@@ -4,9 +4,8 @@
 
 
 module.exports = function(extend, EventData, GesEvent, NotificationEvent) {
-    return function index(_options) {
-        var options = {};
-        extend(options, _options || {});
+    return function plugin(_options) {
+        var options = extend({}, _options || {});
 
         return {
             eventData        : EventData,
