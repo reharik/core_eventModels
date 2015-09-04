@@ -1,14 +1,12 @@
 
 
-var Buffer = require('buffer').Buffer;
-
 module.exports = function(bufferToJson){
 
     var init = function(_eventName, _data, _metadata, originalPosition)
     {
-        var eventName = Buffer.isBuffer(_eventName) ? bufferToJson(_eventName) : _eventName;
-        var metadata = Buffer.isBuffer(_metadata) ? bufferToJson(_metadata) : _metadata;
-        var data = Buffer.isBuffer(_data) ? bufferToJson(_data) : _data;
+        var eventName =  bufferToJson(_eventName);
+        var metadata = bufferToJson(_metadata);
+        var data = bufferToJson(_data);
         // this is provided by the repository or the distributer
 
         return {

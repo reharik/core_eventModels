@@ -3,9 +3,9 @@
  */
 
 
-module.exports = function(logger) {
+module.exports = function(logger, JSON, buffer) {
     return function bufferToJson(item) {
-        if(!Buffer.isBuffer(item)){
+        if(!buffer.isBuffer(item)){
             logger.info('item is not a buffer, returning original item');
             return item;
         }

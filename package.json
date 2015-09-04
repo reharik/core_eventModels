@@ -15,14 +15,14 @@
     "type": "git",
     "url": "git+https://github.com/reharik/core_eventModels.git"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "Raif Harik",
   "license": "MIT",
   "dependencies": {
     "buffer": "^3.4.2",
+    "dagon": "0.0.14",
     "extend": "^3.0.0",
-    "yowlwrapper": "https://github.com/reharik/core_yowlWrapper.git#master"
+    "corelogger": "https://github.com/reharik/core_logger.git#master"
   },
   "devDependencies": {
     "babel": "^5.5.6",
