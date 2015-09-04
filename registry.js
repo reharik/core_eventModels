@@ -10,6 +10,6 @@ module.exports = function(_options) {
         x.pathToRoot(__dirname)
             .requireDirectoryRecursively('./src')
             .for('buffer').instanciate(i=> i.initializeWithMethod('Buffer'))
-            .for('corelogger').withThis('logger').instanciate(i=>i.asFunc().withParameters(options.logger || {}))
+            .for('corelogger').renameTo('logger').instanciate(i=>i.asFunc().withParameters(options.logger || {}))
             .complete());
 };
