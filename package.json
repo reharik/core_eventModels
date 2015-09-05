@@ -6,7 +6,7 @@
   "homepage": "https://github.com/reharik/core_eventModels#readme",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "test": "mocha --require ./babelhook --opts ./tests/mocha.opts ./tests/unitTests/*.js"
   },
   "bugs": {
     "url": "https://github.com/reharik/core_eventModels/issues"
@@ -19,10 +19,11 @@
   "author": "Raif Harik",
   "license": "MIT",
   "dependencies": {
+    "JSON": "^1.0.0",
     "buffer": "^3.4.2",
+    "corelogger": "https://github.com/reharik/core_logger.git#master",
     "dagon": "0.1.0",
-    "extend": "^3.0.0",
-    "corelogger": "https://github.com/reharik/core_logger.git#master"
+    "extend": "^3.0.0"
   },
   "devDependencies": {
     "babel": "^5.5.6",

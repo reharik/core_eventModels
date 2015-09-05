@@ -2,7 +2,7 @@
 
 module.exports = function(bufferToJson){
 
-    var init = function(_eventName, _data, _metadata, originalPosition)
+    return function(_eventName, _data, _metadata, originalPosition)
     {
         var eventName =  bufferToJson(_eventName);
         var metadata = bufferToJson(_metadata);
@@ -16,13 +16,5 @@ module.exports = function(bufferToJson){
             originalPosition: originalPosition
         };
     };
-    var gesEventFromStream = function(sd) {
-        return init(sd.OriginalEvent.Metadata['eventName'],
-            sd.OriginalEvent.Data,
-            sd.OriginalEvent.Metadata,
-            sd.OriginalPosition);
-    };
-
-    return {init:init, gesEventFromStream:gesEventFromStream};
 };
 

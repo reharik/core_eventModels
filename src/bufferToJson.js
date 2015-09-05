@@ -5,7 +5,7 @@
 
 module.exports = function(logger, JSON, buffer) {
     return function bufferToJson(item) {
-        if(!buffer.isBuffer(item)){
+        if(!buffer.Buffer.isBuffer(item)){
             logger.info('item is not a buffer, returning original item');
             return item;
         }

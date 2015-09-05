@@ -7,6 +7,12 @@ module.exports = function(EventData, GesEvent, NotificationEvent) {
     return {
         eventData        : EventData,
         gesEvent         : GesEvent,
-        notificationEvent: NotificationEvent
+        notificationEvent: NotificationEvent,
+        gesEventFromStream : function(sd) {
+            return GesEvent(sd.OriginalEvent.Metadata['eventName'],
+                sd.OriginalEvent.Data,
+                sd.OriginalEvent.Metadata,
+                sd.OriginalPosition);
+        }
     }
 };
