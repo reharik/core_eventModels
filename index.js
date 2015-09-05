@@ -11,9 +11,8 @@ module.exports = function(_options) {
     };
     extend(options, _options || {});
     var container = require('./registry')(options);
-    var plugin = container.getInstanceOf('plugin');
 
-    return plugin(options);
+    return container.getInstanceOf('plugin');
 };
 
 

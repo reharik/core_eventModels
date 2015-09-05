@@ -3,14 +3,10 @@
  */
 
 
-module.exports = function(extend, EventData, GesEvent, NotificationEvent) {
-    return function plugin(_options) {
-        var options = extend({}, _options || {});
-
-        return {
-            eventData        : EventData,
-            gesEvent         : GesEvent,
-            notificationEvent: NotificationEvent
-        }
-    };
+module.exports = function(EventData, GesEvent, NotificationEvent) {
+    return {
+        eventData        : EventData,
+        gesEvent         : GesEvent,
+        notificationEvent: NotificationEvent
+    }
 };
