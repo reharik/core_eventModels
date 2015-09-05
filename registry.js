@@ -9,7 +9,7 @@ module.exports = function(_options) {
     return new container(x=>
         x.pathToRoot(__dirname)
             .requireDirectoryRecursively('./src')
-            .for('buffer').instanciate(i=> i.initializeWithMethod('Buffer'))
-            .for('corelogger').renameTo('logger').instanciate(i=>i.asFunc().withParameters(options.logger || {}))
+            .for('buffer').instantiate(i=> i.initializeWithMethod('Buffer'))
+            .for('corelogger').renameTo('logger').instantiate(i=>i.asFunc().withParameters(options.logger || {}))
             .complete());
 };
