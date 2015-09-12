@@ -7,6 +7,11 @@ module.exports = function(_options) {
     var options = {
         logger: {
             moduleName: 'EventModels'
+        },
+        dagon: {
+            logger: {
+                application: 'eventModels'
+            }
         }
     };
     extend(options, _options || {});
