@@ -22,13 +22,11 @@
     "JSON": "^1.0.0",
     "buffer": "^3.4.2",
     "corelogger": "https://github.com/reharik/core_logger.git#master",
-    "dagon": "0.1.0",
+    "dagon": "https://github.com/reharik/dagon.git#functional",
     "extend": "^3.0.0"
   },
   "devDependencies": {
-    "babel": "^5.5.6",
-    "babel-runtime": "^5.5.6",
-    "babelify": "^5.0.4",
+    "babel": "^5.8.23",
     "del": "^1.2.0",
     "gulp": "^3.9.0",
     "mocha": "^2.2.5",
