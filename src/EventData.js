@@ -2,7 +2,7 @@
  * Created by rharik on 6/12/15.
  */
 
-module.exports = function(uuid, JSON) {
+module.exports = function(uuid, JSON, buffer) {
     return function EventData(eventName, data, metadata) {
         metadata           = metadata || {};
         data               = JSON.stringify(data || {});
@@ -14,8 +14,8 @@ module.exports = function(uuid, JSON) {
             EventId : uuid.v4(),
             Type    : eventName,
             IsJson  : true,
-            Data    : data,
-            Metadata: metadata
+            Data    : new buffer.Buffer(data),
+            Metadata: new buffer.Buffer(metadata)
         };
     };
 };
