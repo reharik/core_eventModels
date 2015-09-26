@@ -11,6 +11,5 @@ module.exports = function(_options) {
             .requireDirectoryRecursively('./src')
             .for('corelogger').renameTo('logger').instantiate(i=>i.asFunc().withParameters(options.logger || {}))
             .complete());
-    console.log(instance.whatDoIHave());
     return instance;
 };
