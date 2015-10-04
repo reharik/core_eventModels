@@ -13,7 +13,15 @@ module.exports = function(bufferToJson){
             eventName: eventName,
             metadata: metadata,
             data: data,
-            originalPosition: originalPosition
+            originalPosition: originalPosition,
+            friendlyDisplay: function(){
+                return {
+                    eventName:this.eventName,
+                    originalPosition:this.originalPosition,
+                    data:this.data.toString(),
+                    metadata:this.metadata.toString()
+                };
+            }.bind(this)
         };
     };
 };

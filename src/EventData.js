@@ -15,7 +15,16 @@ module.exports = function(uuid, JSON, buffer) {
             Type    : eventName,
             IsJson  : true,
             Data    : new buffer.Buffer(data),
-            Metadata: new buffer.Buffer(metadata)
+            Metadata: new buffer.Buffer(metadata),
+            friendlyDisplay: function(){
+                return {
+                    EventId:this.EventId,
+                    Type:this.Type,
+                    IsJson:this.IsJson,
+                    Data:this.Data.toString(),
+                    MetaData:this.Metadata.toString()
+                };
+            }.bind(this)
         };
     };
 };

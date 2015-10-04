@@ -15,7 +15,14 @@ module.exports = function() {
         return {
             eventName     : eventName,
             continuationId: continuationId,
-            data          : data
+            data          : data,
+            friendlyDisplay: function(){
+                return {
+                    eventName:this.eventName,
+                    continuationId:this.continuationId,
+                    data:this.data.toString()
+                };
+            }.bind(this)
         }
     }
 };
