@@ -20,14 +20,14 @@ module.exports = function(JSON, EventData) {
                 return EventData(this.eventName, this.data, {"continuationId": this.continuationId,
                     "eventName":this.eventName,
                     "streamType":this.eventName})
-            }.bind(this),
+            },
             friendlyDisplay: function(){
                 return JSON.stringify({
                     eventName:this.eventName,
                     continuationId:this.continuationId,
                     data:this.data.toString()
                 });
-            }.bind(this)
+            }
         }
     }
 };

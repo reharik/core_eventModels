@@ -24,7 +24,7 @@ module.exports = function(uuid, JSON, buffer) {
                     Data:this.Data.toString(),
                     MetaData:this.Metadata.toString()
                 });
-            }.bind(this)
+            }
         };
     };
 };
