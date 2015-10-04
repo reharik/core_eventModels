@@ -22,14 +22,12 @@ describe('EventData Test', function() {
         it('should return an object with buffer for data',  function () {
             var result = mut('eventName',{some:"data"}, {some:"metadata"});
             JSON.parse(result.Data.toString()).some.must.equal("data");
-
         })
     });
 
     context('when passinging json for metadata', function () {
         it('should return an object with buffer for metadata',  function () {
             var result = mut('eventName',{some:"data"}, {some:"metadata"});
-            console.log(result.Metadata.toString())
             JSON.parse(result.Metadata.toString()).some.must.equal("metadata");
             JSON.parse(result.Metadata.toString()).eventName.must.equal("eventName");
         })

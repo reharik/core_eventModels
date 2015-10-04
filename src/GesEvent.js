@@ -21,7 +21,7 @@ module.exports = function(bufferToJson, JSON){
                     data:this.data.toString(),
                     metadata:this.metadata.toString()
                 });
-            }.bind(this)
+            }
         };
     };
 };
