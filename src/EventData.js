@@ -17,13 +17,13 @@ module.exports = function(uuid, JSON, buffer) {
             Data    : new buffer.Buffer(data),
             Metadata: new buffer.Buffer(metadata),
             friendlyDisplay: function(){
-                return {
+                return JSON.stringify({
                     EventId:this.EventId,
                     Type:this.Type,
                     IsJson:this.IsJson,
                     Data:this.Data.toString(),
                     MetaData:this.Metadata.toString()
-                };
+                });
             }.bind(this)
         };
     };

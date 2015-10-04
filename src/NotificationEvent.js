@@ -2,7 +2,7 @@
  * Created by rharik on 6/19/15.
  */
 
-module.exports = function() {
+module.exports = function(JSON) {
     return function(_result, _message, _initialEvent, continuationId) {
         var eventName = 'notification';
         var data      = {
@@ -17,11 +17,11 @@ module.exports = function() {
             continuationId: continuationId,
             data          : data,
             friendlyDisplay: function(){
-                return {
+                return JSON.stringify({
                     eventName:this.eventName,
                     continuationId:this.continuationId,
                     data:this.data.toString()
-                };
+                });
             }.bind(this)
         }
     }

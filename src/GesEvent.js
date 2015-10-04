@@ -1,6 +1,6 @@
 
 
-module.exports = function(bufferToJson){
+module.exports = function(bufferToJson, JSON){
 
     return function(_eventName, _data, _metadata, originalPosition)
     {
@@ -15,12 +15,12 @@ module.exports = function(bufferToJson){
             data: data,
             originalPosition: originalPosition,
             friendlyDisplay: function(){
-                return {
+                return JSON.stringify({
                     eventName:this.eventName,
                     originalPosition:this.originalPosition,
                     data:this.data.toString(),
                     metadata:this.metadata.toString()
-                };
+                });
             }.bind(this)
         };
     };
