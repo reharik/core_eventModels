@@ -2,8 +2,8 @@
  * Created by rharik on 6/19/15.
  */
 
-module.exports = function(JSON) {
-    return function(_result, _message, _initialEvent, continuationId) {
+module.exports = function(JSON, EventData) {
+    return function(_result, _message, _initialEvent) {
         var eventName = 'notification';
         var data      = {
             result      : _result,
@@ -14,8 +14,13 @@ module.exports = function(JSON) {
 
         return {
             eventName     : eventName,
-            continuationId: continuationId,
+            continuationId: _initialEvent.metadata.continuationId,
             data          : data,
+            toEventData   : function(){
+                return EventData(this.eventName, this.data, {"continuationId": this.continuationId,
+                    "eventName":this.eventName,
+                    "streamType":this.eventName})
+            }.bind(this),
             friendlyDisplay: function(){
                 return JSON.stringify({
                     eventName:this.eventName,
