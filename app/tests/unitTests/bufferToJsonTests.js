@@ -8,6 +8,11 @@ describe('bufferToJson', function() {
     var mut;
     var JSON;
     var options = {
+        dagon:{
+            logger: {
+                moduleName: 'EventModels'
+            }
+        },
         logger: {
             moduleName: 'EventModels'
         }
