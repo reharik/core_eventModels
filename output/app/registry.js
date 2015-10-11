@@ -5,6 +5,7 @@
 
 var dagon = require('dagon');
 var path = require('path');
+
 module.exports = function (_options) {
     var options = _options || {};
     var container = dagon(options.dagon);
