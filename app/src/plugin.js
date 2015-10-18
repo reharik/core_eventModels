@@ -1,7 +1,7 @@
 /**
  * Created by reharik on 8/13/15.
  */
-
+"use strict";
 
 module.exports = function(EventData, GesEvent, NotificationEvent) {
     return {

@@ -1,6 +1,7 @@
 /**
  * Created by rharik on 6/19/15.
  */
+"use strict";
 
 module.exports = function(JSON, EventData) {
     return function(_result, _message, _initialEvent) {

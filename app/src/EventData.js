@@ -1,6 +1,7 @@
 /**
  * Created by rharik on 6/12/15.
  */
+"use strict";
 
 module.exports = function(uuid, JSON, buffer) {
     return function EventData(eventName, data, metadata) {
