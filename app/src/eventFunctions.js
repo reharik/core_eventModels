@@ -1,5 +1,5 @@
 
-module.exports = function(_, _fantasy){
+module.exports = function(_, _fantasy, fh){
     var Maybe = _fantasy.Maybe;
     var getEventType = _.compose(_.chain(fh.safeProp('EventType')), fh.safeProp('Event'));
     var isNonSystemEvent = _.compose(_.chain(fh.doesNotStartWith('$')), getEventType);
