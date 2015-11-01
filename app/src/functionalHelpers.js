@@ -2,8 +2,8 @@
  * Created by rharik on 11/1/15.
  */
 
-module.exports = function(_, _fantasy, buffer, JSON) {
-var Maybe = _fantasy.Maybe;
+module.exports = function(_, 'ramada-fantasy', buffer, JSON) {
+var Maybe = ramada-fantasy.Maybe;
 
 var log = function(x){ console.log(x); return x; };
 var safeProp = _.curry((x,o) => Maybe(o[x])); // !== 'undefined' ? Maybe(o[x]) : Maybe(null));
