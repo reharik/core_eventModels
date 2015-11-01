@@ -1,7 +1,7 @@
 
-module.exports = function(functionalHelper){
+module.exports = function(fh){
 
-    var fh = functionalHelper;
+    //var fh = functionalHelper;
     var Maybe = _fantasy.Maybe;
     var getEventType = _.compose(_.chain(fh.safeProp('EventType')), fh.safeProp('Event'));
     var isNonSystemEvent = _.compose(_.chain(fh.doesNotStartWith('$')), getEventType);

@@ -13,6 +13,7 @@ module.exports = function(_options) {
         x.pathToRoot(path.join(__dirname,'..'))
             .requireDirectoryRecursively('./app/src')
             .for('corelogger').renameTo('logger').instantiate(i=>i.asFunc().withParameters(options.logger || {}))
+            .for('functionalHelpers').renameTo('fh')
             .for('ramda').renameTo('_')
             .for('ramda-fantasy').renameTo('_fantasy')
             .complete());
