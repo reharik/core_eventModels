@@ -15,6 +15,6 @@ module.exports = function(_options) {
             .for('corelogger').renameTo('logger').instantiate(i=>i.asFunc().withParameters(options.logger || {}))
             //.for('functionalHelpers').renameTo('fh')
             .for('ramda').renameTo('_')
-            .for('ramda-fantasy').renameTo('_fantasy')
+            .for('ramdafantasy').renameTo('_fantasy')
             .complete());
 };
