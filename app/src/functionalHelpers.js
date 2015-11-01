@@ -2,7 +2,7 @@
  * Created by rharik on 11/1/15.
  */
 
-module.exports = function(_, _fantasy, buffer) {
+module.exports = function(_, _fantasy, buffer, JSON) {
 var Maybe = _fantasy.Maybe;
 
 var log = function(x){ console.log(x); return x; };
