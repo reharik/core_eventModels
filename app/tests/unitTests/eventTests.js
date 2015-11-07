@@ -48,27 +48,15 @@ describe('event Test', function() {
     beforeEach(function(){
     });
 
-    context('when calling getEventType', function () {
-        it('should return a maybe of eventType',  function () {
-            mut.getEventType(appEvent).must.eql(Maybe.of('event'));
-        })
-    });
-
-    context('when calling getEventType on event with no eventType', function () {
-        it('should return a maybe nothing',  function () {
-            mut.getEventType(noEventTypeEvent).must.eql(Maybe.Nothing());
-        })
-    });
-
     context('when calling isNonSystemEvent on a system event', function () {
         it('should return a null maybe',  function () {
-            mut.isNonSystemEvent(sysEvent).must.eql(Maybe.Nothing());
+            mut.isNonSystemEvent(sysEvent).must.be.false()
         })
     });
     //
     context('when calling isNonSystemEvent on a NON system event', function () {
         it('should return a maybe of true',  function () {
-            mut.isNonSystemEvent(appEvent).must.eql(Maybe.of(true));
+            mut.isNonSystemEvent(appEvent).must.be.true();
         })
     });
 
