@@ -87,7 +87,7 @@ describe('event Test', function() {
         it('should return a maybe of true', function(){
             var value = {streamType: 'event'};
             appEvent.OriginalEvent.Metadata = new Buffer(JSON.stringify(value), 'utf8');
-            mut.isEventTypeEvent(appEvent).must.be.true();
+            mut.isEventTypeEvent(appEvent).must.eql(Maybe.of(true));
         })
     });
 

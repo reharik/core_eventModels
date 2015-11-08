@@ -9,7 +9,7 @@ var log = function(x){ console.log(x); return x; };
 var safeProp = _.curry((x,o) => Maybe(o[x])); // !== 'undefined' ? Maybe(o[x]) : Maybe(null));
 var startsWith  = _.curry((x,s) => s.startsWith(x));
 var doesNotStartWith = _.curry((x,s) =>  !s.startsWith(x) );
-var mabyeMatches = _.curry((x,y)=> x===y ? Maybe.of(true) : Maybe.Nothing() );
+var maybeMatches = _.curry((x,y)=> x===y ? Maybe.of(true) : Maybe.Nothing() );
 var parseBuffer = function(item){ return buffer.Buffer.isBuffer(item) ? Maybe.of(JSON.parse(item.toString('utf8'))) : Maybe.Nothing() };
 
 return {
@@ -17,7 +17,7 @@ return {
         parseBuffer,
         startsWith,
         doesNotStartWith,
-        matches,
+        maybeMatches,
         log
     }
 };
