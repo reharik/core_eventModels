@@ -50,13 +50,13 @@ describe('event Test', function() {
 
     context('when calling isNonSystemEvent on a system event', function () {
         it('should return a null maybe',  function () {
-            mut.isNonSystemEvent(sysEvent).must.be.false()
+            mut.isNonSystemEvent(sysEvent).must.eql(Maybe.Nothing());
         })
     });
     //
     context('when calling isNonSystemEvent on a NON system event', function () {
         it('should return a maybe of true',  function () {
-            mut.isNonSystemEvent(appEvent).must.be.true();
+            mut.isNonSystemEvent(appEvent).must.eql(Maybe.of(true));
         })
     });
 
@@ -87,7 +87,7 @@ describe('event Test', function() {
         it('should return a maybe of true', function(){
             var value = {streamType: 'event'};
             appEvent.OriginalEvent.Metadata = new Buffer(JSON.stringify(value), 'utf8');
-            mut.isEventTypeEvent(appEvent).must.be.true();
+            mut.isEventTypeEvent(appEvent).must.eql(Maybe.of(true));
         })
     });
 
