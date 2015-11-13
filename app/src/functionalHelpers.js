@@ -2,22 +2,22 @@
  * Created by rharik on 11/1/15.
  */
 
-module.exports = function(_, _fantasy, buffer, JSON) {
+module.exports = function(_, _fantasy, buffer) {
 var Maybe = _fantasy.Maybe;
 
 var log = function(x){ console.log(x); return x; };
-var safeProp = _.curry((x,o) => Maybe(o[x])); // !== 'undefined' ? Maybe(o[x]) : Maybe(null));
-var startsWith  = _.curry((x,s) => s.startsWith(x) ? Maybe.of( true) : Maybe.Nothing());
-var doesNotStartWith = _.curry((x,s) =>  s.startsWith(x) ? Maybe.Nothing() : Maybe.of(true));
-var maybeMatches = _.curry((x,y)=> x===y ? Maybe.of(true) : Maybe.Nothing() );
-var parseBuffer = function(item){ return buffer.Buffer.isBuffer(item) ? Maybe.of(JSON.parse(item.toString('utf8'))) : Maybe.Nothing() };
-
+var safeProp = _.curry((x,o) => Maybe(o[x]));
+var startsWith  = _.curry((x,s) => s.startsWith(x) );
+var doesNotStartWith = _.curry((x,s) => !s.startsWith(x) );
+var parseBuffer = x => buffer.Buffer.isBuffer(x) ? tryParseJSON(x.toString('utf8')) : Maybe.Nothing() ;
+var tryParseJSON = x => { try { return Maybe.of(JSON.parse(x)); }
+                        catch (e) { return Maybe.Nothing(); } };
 return {
         safeProp,
-        parseBuffer,
         startsWith,
         doesNotStartWith,
-        maybeMatches,
+        parseBuffer,
+        tryParseJSON,
         log
     }
 };

@@ -50,7 +50,7 @@ describe('event Test', function() {
 
     context('when calling isNonSystemEvent on a system event', function () {
         it('should return a null maybe',  function () {
-            mut.isNonSystemEvent(sysEvent).must.eql(Maybe.Nothing());
+            mut.isNonSystemEvent(sysEvent).must.eql(Maybe.of(false));
         })
     });
     //
