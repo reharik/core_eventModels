@@ -48,18 +48,6 @@ describe('event Test', function() {
     beforeEach(function(){
     });
 
-    context('when calling isNonSystemEvent on a system event', function () {
-        it('should return a null maybe',  function () {
-            mut.isNonSystemEvent(sysEvent).must.eql(Maybe.of(false));
-        })
-    });
-    //
-    context('when calling isNonSystemEvent on a NON system event', function () {
-        it('should return a maybe of true',  function () {
-            mut.isNonSystemEvent(appEvent).must.eql(Maybe.of(true));
-        })
-    });
-
     context('when calling parseMetadata event', function(){
         it('should return a maybe of metatdata', function(){
             var value = {iAm: 'data!!'};
@@ -82,21 +70,4 @@ describe('event Test', function() {
             mut.parseMetadata(appEvent).must.eql(Maybe.Nothing());
         })
     });
-
-    context('when calling isEventTypeEvent on event of type event', function(){
-        it('should return a maybe of true', function(){
-            var value = {streamType: 'event'};
-            appEvent.OriginalEvent.Metadata = new Buffer(JSON.stringify(value), 'utf8');
-            mut.isEventTypeEvent(appEvent).must.eql(Maybe.of(true));
-        })
-    });
-
-    //context('when calling isEventTypeEvent on event of type event', function(){
-    //    it('should return a maybe of true', function(){
-    //        //var x = Maybe('someValue').map(mut.testTransform);
-    //        var x1 = _.compose(_.chain(mut.testTransform), mut.safeProp('EventType'));
-    //        var newObj = x1({EventType:'fu'});
-    //        function(orig){
-    //
-    //        }
 });

@@ -8,14 +8,12 @@ var Maybe = _fantasy.Maybe;
 var log = function(x){ console.log(x); return x; };
 var safeProp = _.curry((x,o) => Maybe(o[x]));
 var startsWith  = _.curry((x,s) => s.startsWith(x) );
-var doesNotStartWith = _.curry((x,s) => !s.startsWith(x) );
 var parseBuffer = x => buffer.Buffer.isBuffer(x) ? tryParseJSON(x.toString('utf8')) : Maybe.Nothing() ;
 var tryParseJSON = x => { try { return Maybe.of(JSON.parse(x)); }
                         catch (e) { return Maybe.Nothing(); } };
 return {
         safeProp,
         startsWith,
-        doesNotStartWith,
         parseBuffer,
         tryParseJSON,
         log
