@@ -24,6 +24,7 @@
     "corelogger": "git+https://github.com/reharik/core_logger.git#master",
     "dagon": "git+https://github.com/reharik/dagon.git#local",
     "extend": "^3.0.0",
+    "folktale": "^1.0.0-SNAPSHOT",
     "ramda": "^0.18.0",
     "ramda-fantasy": "^0.4.1"
   },
