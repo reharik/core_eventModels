@@ -21,8 +21,8 @@
   "dependencies": {
     "JSON": "^1.0.0",
     "buffer": "^3.4.2",
-    "corelogger": "git+https://github.com/reharik/core_logger.git#master",
-    "dagon": "git+https://github.com/reharik/dagon.git#local",
+    "corelogger": "git://github.com/reharik/core_logger.git#master",
+    "dagon": "git://github.com/reharik/dagon.git#local",
     "extend": "^3.0.0",
     "folktale": "^1.0.0-SNAPSHOT",
     "ramda": "^0.18.0",
