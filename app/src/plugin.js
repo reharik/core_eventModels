@@ -3,11 +3,10 @@
  */
 "use strict";
 
-module.exports = function(EventData, GesEvent, NotificationEvent, eventFunctions, functionalHelpers) {
+module.exports = function(EventData, GesEvent, eventFunctions, functionalHelpers) {
     return {
         eventData        : EventData,
         gesEvent         : GesEvent,
-        notificationEvent: NotificationEvent,
         eventFunctions,
         functionalHelpers,
         gesEventFromStream : function(sd) {

@@ -14,7 +14,7 @@ module.exports = function(_options) {
             .requireDirectoryRecursively('./app/src')
             .for('corelogger').renameTo('logger').instantiate(i=>i.asFunc().withParameters(options.logger || {}))
             //.for('functionalHelpers').renameTo('fh')
-            .for('ramda').renameTo('_')
+            .for('ramda').renameTo('R')
             .for('ramdafantasy').renameTo('_fantasy')
             .complete());
 };
