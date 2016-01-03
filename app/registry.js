@@ -8,8 +8,8 @@ var path = require('path');
 
 module.exports = function(_options) {
     var options = _options || {};
-    var container = dagon(options.dagon);
-    return new container(x=>
+    var registry = dagon(options.dagon).registry;
+    return registry(x=>
         x.pathToRoot(path.join(__dirname,'..'))
             .requireDirectoryRecursively('./app/src')
             .complete());
