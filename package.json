@@ -22,7 +22,7 @@
     "JSON": "^1.0.0",
     "buffer": "^3.4.2",
     "corelogger": "git://github.com/reharik/core_logger.git#master",
-    "dagon": "git://github.com/reharik/dagon.git#newVersion",
+    "dagon": "git://github.com/reharik/dagon.git",
     "extend": "^3.0.0",
     "ramda": "^0.18.0",
     "ramda-fantasy": "^0.4.1"
