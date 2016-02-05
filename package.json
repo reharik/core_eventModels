@@ -1,12 +1,12 @@
 {
   "name": "eventmodels",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": false,
   "description": "core_eventModels",
   "homepage": "https://github.com/reharik/core_eventModels#readme",
   "main": "app/index.js",
   "scripts": {
-    "test": "mocha --require ./output/app/tests/babelhook --opts ./output/app/tests/mocha.opts ./output/app/tests/unitTests/*.js"
+    "test": "mocha --require ./app/tests/babelhook --opts ./app/tests/mocha.opts ./app/tests/unitTests/*.js"
   },
   "bugs": {
     "url": "https://github.com/reharik/core_eventModels/issues"
@@ -21,9 +21,11 @@
   "dependencies": {
     "JSON": "^1.0.0",
     "buffer": "^3.4.2",
-    "corelogger": "git+https://github.com/reharik/core_logger.git#master",
-    "dagon": "git+https://github.com/reharik/dagon.git#local",
-    "extend": "^3.0.0"
+    "corelogger": "git://github.com/reharik/core_logger.git#master",
+    "dagon": "git://github.com/reharik/dagon.git",
+    "extend": "^3.0.0",
+    "ramda": "^0.18.0",
+    "ramda-fantasy": "^0.4.1"
   },
   "devDependencies": {
     "babel": "^5.8.23",

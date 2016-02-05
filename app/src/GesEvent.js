@@ -1,28 +1,15 @@
 
 "use strict";
 
-module.exports = function(bufferToJson, JSON){
-
-    return function(_eventName, _data, _metadata, originalPosition)
+module.exports = function(eventFunctions){
+    return function(eventName, _data, _metadata, originalPosition)
     {
-        var eventName =  bufferToJson(_eventName);
-        var metadata = bufferToJson(_metadata);
-        var data = bufferToJson(_data);
-        // this is provided by the repository or the distributer
-
+        var ef = eventFunctions;
         return {
-            eventName: eventName,
-            metadata: metadata,
-            data: data,
-            originalPosition: originalPosition,
-            friendlyDisplay: function(){
-                return JSON.stringify({
-                    eventName:this.eventName,
-                    originalPosition:this.originalPosition,
-                    data:this.data.toString(),
-                    metadata:this.metadata.toString()
-                });
-            }
+            eventName,
+            metadata: ef.parseMetadata(_metadata).getOrElse(),
+            data: ef.parseData(_data).getOrElse(),
+            originalPosition
         };
     };
 };

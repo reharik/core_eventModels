@@ -4,6 +4,7 @@
 "use strict";
 
 var extend = require('extend');
+var registry = require('./registry');
 
 module.exports = function(_options) {
     var options = {
@@ -12,10 +13,7 @@ module.exports = function(_options) {
         }
     };
     extend(options, _options || {});
-
-    var container = require('./registry')(options);
-
-    return container.getInstanceOf('plugin');
+    return  registry(options);
 };
 
 
